@@ -1,0 +1,15 @@
+name: men1
+channels:
+  - conda-forge
+  - openeye
+dependencies:
+  - appdirs
+  - mdanalysis
+  - openeye-toolkits
+  - openff-toolkit
+  - pip
+  - rdkit
+  - requests
+  - scipy
+  - pip:
+    - https://github.com/openkinome/kinoml/archive/270fae0191a6ed4d202d870fbf30e39574712d58.zip
