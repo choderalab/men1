@@ -1,0 +1,15 @@
+
+<config>
+  <!-- Set the total number of steps to keep the WU to be just a few hours long -->
+  <!-- Here, we choose 10 ns @ 4 fs/timestep = 10 ns * 1000 ps/ns * 250 steps/ps = 2500000 -->
+  <!-- Note that, if using 4 fs/timestep, you may need to use hydrogen mass repartitioning (HMR) and constrained hydrogens to achieve stable simulations, unless you are using BAOAB or LF-Middle -->
+  <numSteps>2500000</numSteps>
+  <!-- Don't return too many snapshots per WU. 10-40 snapshots/WU is probably sufficient. -->
+  <!-- Here, we choose every 1 ns @ 4 fs/timestep = 1 ns * 1000 ps/ns * 250 steps/ps = 250000 -->
+  <xtcFreq>250000</xtcFreq>
+  <!-- We recommend you use mixed precision, since this provides a large increase in accuracy and stability at modest additional cost -->
+  <!-- This requires the GPUs support double precision -->
+  <precision>mixed</precision>
+  <!-- Only return solute and ions to save storage space -->
+  <xtcAtoms>solute</xtcAtoms>
+</config>
